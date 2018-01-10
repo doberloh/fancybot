@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const login = require("./auth.json");
 var raids = [];
 
 client.on('ready', () => {
@@ -125,4 +124,4 @@ client.on('message', msg => {
     }
 });
 
-client.login(login["token"]);
+client.login(process.env.LOGIN_TOKEN);
